@@ -1,0 +1,30 @@
+#To create virtual envroinment
+python -m venv venv
+#To activate virtual envroinment
+.\venv\Scripts\activate
+#To install all the requirements
+pip install -r requirements.txt
+
+#Weather API configuration 
+To set your OpenWeatherMap API key, follow these steps:
+Get an API key from OpenWeatherMap:
+Go to openweathermap.org site
+Sign up for a free account
+Once logged in, go to your account dashboard
+Navigate to "API keys" or "My API keys"
+Copy your API key (it will look something like 1234567890abcdef1234567890abcdef)
+
+Open your project folder in your code editor
+Open .env (exactly like this, with the dot)
+Add this line to the file (replace your_api_key_here with your actual API key):
+OPENWEATHER_API_KEY=your_api_key_here
+
+#Run migration
+python manage.py migrate
+#Start the Django server
+python manage.py runserver // Open your browser and go to: http://localhost:8000
+
+#To create admin (super user)
+python manage.py createsuperuser
+
+Give user name, email id and password
